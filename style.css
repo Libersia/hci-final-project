@@ -1,0 +1,108 @@
+body {
+    background-image: url("homeBG.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+body::before {
+    content:"";
+    position: fixed;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.82);
+    z-index:-1;
+}
+
+body::after {
+    content:"";
+    position: fixed;
+    width:100%;
+    height:100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255,0,0,0.05),
+        rgba(255,0,0,0.05) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events:none;
+}
+
+.title, .blood-text {
+    font-family: 'Nosifer', sans-serif;
+    color: red;
+    font-size: 60px;
+    text-shadow: 0 0 10px darkred, 2px 2px 5px black;
+    margin-top: 90px;
+    text-align: center;
+}
+
+.nav-container {
+    position: fixed;
+    top:0;
+    width:100%;
+    background: black;
+    border-bottom: 2px solid red;
+    padding:12px;
+    z-index:999;
+    text-align:center;
+}
+
+.nav-container button {
+    background:black;
+    color:red;
+    border:1px solid red;
+    padding:12px 25px;
+    margin:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.file-card {
+    width:700px;
+    background: rgba(0,0,0,0.9);
+    border-left:5px solid red;
+    margin:50px auto;
+    padding:20px;
+    box-shadow:0 0 25px black;
+    position: relative;
+    transition:0.3s;
+}
+
+.status {
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:red;
+    color:black;
+    padding:4px 10px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.file-card img {
+    width: 80%;
+    border:2px solid red;
+    transition:0.4s;
+    display:block;
+    margin: 15px auto;
+}
+
+.file-header {
+    color:red;
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.artist-btn, .back-btn, .feature-btn {
+    background:black;
+    color:red;
+    border:1px solid red;
+    padding:10px 20px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
